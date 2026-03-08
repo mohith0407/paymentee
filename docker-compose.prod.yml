@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: paymentee_db_prod
+    restart: always
+    env_file:
+      - .env.production
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+    # Notice: No 'ports' mapping here. The DB is fully hidden from the internet.
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: paymentee_app_prod
+    restart: always
+    env_file:
+      - .env.production
+    ports:
+      - "80:3000" # Maps standard web port 80 to Next.js port 3000
+    depends_on:
+      - db
+
+volumes:
+  postgres_prod_data:

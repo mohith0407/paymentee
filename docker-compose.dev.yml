@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: paymentee_db_dev
+    env_file:
+      - .env
+    ports:
+      - "5432:5432" # Exposes DB to your local machine
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_dev_data:
+
+
+# for development
+# docker compose -f docker-compose.dev.yml up -d 
+# for production
+# docker compose -f docker-compose.prod.yml up -d --build 
