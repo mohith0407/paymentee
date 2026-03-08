@@ -1,7 +1,7 @@
 # 💰 Paymentee
 
 <div align="center">
-  <img src="public/image.png" alt="Paymentee Logo" width="120" height="120" style="border-radius: 20px">
+  <img src="public/paymentee.gif" alt="Paymentee Logo" width="120" height="120" style="border-radius: 20px">
   <h3>Splitting expenses made simple</h3>
   <p>Track shared expenses and settle debts effortlessly</p>
   
