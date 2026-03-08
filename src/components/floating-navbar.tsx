@@ -58,103 +58,6 @@ export default function FloatingNavbar() {
     }
   };
 
-  // useEffect(() => {
-  //   // Animate hamburger icon
-  //   if (hamburgerRef.current) {
-  //     const topBar = hamburgerRef.current.querySelector('.hamburger-top');
-  //     const middleBar = hamburgerRef.current.querySelector('.hamburger-middle');
-  //     const bottomBar = hamburgerRef.current.querySelector('.hamburger-bottom');
-
-  //     if (topBar && middleBar && bottomBar) {
-  //       if (isMenuOpen) {
-  //         gsap.to(topBar, { duration: 0.3, y: 9, rotation: 45, transformOrigin: "center" });
-  //         gsap.to(middleBar, { duration: 0.3, opacity: 0 });
-  //         gsap.to(bottomBar, { duration: 0.3, y: -9, rotation: -45, transformOrigin: "center" });
-  //       } else {
-  //         gsap.to(topBar, { duration: 0.3, y: 0, rotation: 0 });
-  //         gsap.to(middleBar, { duration: 0.3, opacity: 1 });
-  //         gsap.to(bottomBar, { duration: 0.3, y: 0, rotation: 0 });
-  //       }
-  //     }
-  //   }
-  // }, [isMenuOpen]);
-
-  // useEffect(() => {
-  //   const nav = navRef.current;
-  //   const logo = logoRef.current;
-  //   const links = linksRef.current;
-  //   const buttons = buttonsRef.current;
-
-  //   if (!nav || !logo || !links || !buttons) return;
-
-  //   // Initial animation - navbar entrance
-  //   gsap.set(nav, { y: -100, opacity: 0 });
-  //   gsap.set([logo, links, buttons], { y: 20, opacity: 0 });
-  //   gsap.set(dotsRef.current, { scale: 0, opacity: 0 });
-
-  //   // Animate navbar entrance
-  //   const tl = gsap.timeline({ delay: 0.5 });
-  //   tl.to(nav, { duration: 0.8, y: 0, opacity: 1, ease: "back.out(1.7)" })
-  //     .to(logo, { duration: 0.6, y: 0, opacity: 1, ease: "power2.out" }, "-=0.4")
-  //     .to(links, { duration: 0.6, y: 0, opacity: 1, ease: "power2.out" }, "-=0.5")
-  //     .to(buttons, { duration: 0.6, y: 0, opacity: 1, ease: "power2.out" }, "-=0.5")
-  //     .to(dotsRef.current, {
-  //       duration: 0.4,
-  //       scale: 1,
-  //       opacity: 1,
-  //       ease: "back.out(1.7)",
-  //       stagger: 0.1
-  //     }, "-=0.3");
-
-  //   // Scroll-based animations
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-  //     const newIsScrolled = scrollY > 50;
-
-  //     if (newIsScrolled !== isScrolled) {
-  //       setIsScrolled(newIsScrolled);
-
-  //       if (newIsScrolled) {
-  //         gsap.to(nav, {
-  //           duration: 0.3,
-  //           scale: 0.95,
-  //           y: -5,
-  //           boxShadow: "0 12px 40px rgba(0, 0, 0, 0.4)",
-  //           ease: "power2.out"
-  //         });
-  //       } else {
-  //         gsap.to(nav, {
-  //           duration: 0.3,
-  //           scale: 1,
-  //           y: 0,
-  //           boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
-  //           ease: "power2.out"
-  //         });
-  //       }
-  //     }
-  //   };
-
-  //   // Floating animation for dots
-  //   dotsRef.current.forEach((dot, index) => {
-  //     if (dot) {
-  //       gsap.to(dot, {
-  //         duration: 2 + index * 0.5,
-  //         y: "random(-3, 3)",
-  //         rotation: "random(-5, 5)",
-  //         repeat: -1,
-  //         yoyo: true,
-  //         ease: "sine.inOut",
-  //         delay: index * 0.2
-  //       });
-  //     }
-  //   });
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  //   };
-  // }, [isScrolled]);
 
   return (
     <nav
@@ -203,7 +106,7 @@ export default function FloatingNavbar() {
                     <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
-                    <DialogTitle>paymentee</DialogTitle>
+                    <DialogTitle>Paymentee</DialogTitle>
                   </div>
                 </DialogHeader>
                 <LoginForm />
@@ -222,7 +125,7 @@ export default function FloatingNavbar() {
                     <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
-                    <DialogTitle>paymentee</DialogTitle>
+                    <DialogTitle>Paymentee</DialogTitle>
                   </div>
                 </DialogHeader>
                 <SignupForm />
@@ -244,7 +147,7 @@ export default function FloatingNavbar() {
                     <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
                       <GalleryVerticalEnd className="size-4" />
                     </div>
-                    <DialogTitle>paymentee</DialogTitle>
+                    <DialogTitle>Paymentee</DialogTitle>
                   </div>
                 </DialogHeader>
                 <LoginForm />
@@ -289,7 +192,7 @@ export default function FloatingNavbar() {
                         <div className="bg-primary text-primary-foreground flex size-6 items-center justify-center rounded-md">
                           <GalleryVerticalEnd className="size-4" />
                         </div>
-                        <DialogTitle>paymentee</DialogTitle>
+                        <DialogTitle>Paymentee</DialogTitle>
                       </div>
                     </DialogHeader>
                     <SignupForm />
@@ -403,7 +306,7 @@ function LogoComponent() {
         ref={logoIconRef}
         className="h-10 flex items-center justify-center border border-primary bg-primary rounded"
       >
-        <Image src='/settle-logo.png' alt="logo" width={100} height={100} />
+        <Image src='/paymentee.gif' alt="logo" width={100} height={100} />
       </div>
     </Link>
   );

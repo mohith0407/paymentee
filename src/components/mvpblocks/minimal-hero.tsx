@@ -297,7 +297,7 @@ export default function MinimalHero() {
               to
             </span>
             <span className="word" data-delay="400">
-              <b>paymentee</b>
+              <b>Paymentee</b>
             </span>
             <span className="word" data-delay="600">
               —
@@ -339,7 +339,7 @@ export default function MinimalHero() {
                 and
               </span>
               <span className="word" data-delay="2200">
-                paymentee
+                settle
               </span>
               <span className="word" data-delay="2350">
                 debts
