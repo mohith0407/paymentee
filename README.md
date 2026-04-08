@@ -80,6 +80,10 @@ personA owes personC $10
 
 ---
 
+# ER Diagram
+<img width="874" height="956" alt="payment-app-er" src="https://github.com/user-attachments/assets/46863aa5-c1c6-4e5a-a17c-d627e1c88060" />
+
+---
 # Tech Stack
 
 | Category | Technologies |
@@ -98,7 +102,7 @@ Paymentee uses **Docker** to ensure a consistent development environment.
 
 ### Prerequisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Docker Desktop
 - Node.js **18+**
 
 ---
